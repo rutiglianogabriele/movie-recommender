@@ -9,9 +9,3 @@ class Config:
     # Data configuration
     RATINGS_FILE = "ratings.csv"
     MOVIES_FILE = "movies.csv"
-    TEST_SIZE = 0.2
-    RANDOM_STATE = 42
-    
-    # Model parameters
-    MIN_RATINGS = 5  # Minimum ratings per user/movie
-    K_NEIGHBORS = 20  # Number of neighbors for collaborative filtering

@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
+
 def analyze_ratings_data(ratings_df):
     """Analyze ratings distribution and basic statistics."""
     analysis = {}
