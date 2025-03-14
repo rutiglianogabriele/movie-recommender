@@ -20,7 +20,15 @@ class MovieLensDataAnalyzer:
         analysis['total_movies'] = movies_df['movieId'].nunique()
         analysis['average_rating'] = ratings_df['rating'].mean()
         analysis['rating_std'] = ratings_df['rating'].std()
-        
+
+        print(f"Number of ratings: {analysis['total_ratings']}")
+        print(f"Number of users: {analysis['unique_users']}")
+        print(f"Number of movies: {analysis['total_movies']}")
+        print(f"Number of reviewed movies: {analysis['total_reviewed_movies']}")
+    
+        return analysis
+    
+    def plot_ratings_distribution(self, ratings_df):
         # Ratings distribution
         rating_counts = ratings_df['rating'].value_counts().sort_index()
         
@@ -72,8 +80,6 @@ class MovieLensDataAnalyzer:
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         plt.show()
-        
-        return analysis
 
     def plot_popularity_vs_rating(self, ratings_df):
         """Analyze relationship between movie popularity and average rating."""
@@ -102,11 +108,6 @@ class MovieLensDataAnalyzer:
         plt.tight_layout()
         plt.show()
         
-        # Calculate correlation
-        correlation = np.corrcoef(np.log10(movie_stats['num_ratings']), movie_stats['avg_rating'])[0, 1]
-        print(f"Correlation between log(popularity) and rating: {correlation:.3f}")
-        
-        return movie_stats
     
     def plot_rating_evolution(self,ratings_df):
         """Analyze how ratings distribution evolves over time."""
@@ -130,7 +131,6 @@ class MovieLensDataAnalyzer:
         # Plot
         plt.figure(figsize=(14, 8))
         percentages.plot(kind='bar', stacked=True, colormap='viridis')
-        
         plt.title('Rating Distribution Evolution Over Time', fontsize=16)
         plt.xlabel('Year', fontsize=14)
         plt.ylabel('Percentage of Ratings', fontsize=14)
@@ -138,8 +138,6 @@ class MovieLensDataAnalyzer:
         plt.legend(title='Rating Value')
         plt.tight_layout()
         plt.show()
-        
-        return percentages
     
     def identify_sparse_entries(ratings_df, min_ratings_user=10, min_ratings_movie=10):
         """Identify users and movies with too few ratings."""
