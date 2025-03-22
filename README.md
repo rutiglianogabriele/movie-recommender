@@ -7,15 +7,15 @@
 
 A machine learning-based recommendation engine that suggests personalized movie recommendations based on user preferences and behavior patterns.
 
-## ✨ Features
+## Features
 
-- 🎯 **Personalized Recommendations**: Delivers tailored movie suggestions based on individual user preferences and rating history
-- 🧠 **Multiple Algorithm Support**: Implements both collaborative filtering and content-based recommendation approaches
-- 📊 **Comprehensive Data Analysis**: Includes exploratory analysis of user behavior, rating patterns, and movie metadata
-- 🔍 **Content Similarity**: Identifies movies with similar characteristics based on genres, actors, directors, and other metadata
-- 📈 **Custom Evaluation Framework**: Measures recommendation quality using multiple metrics beyond standard error measurements
+- **Personalized Recommendations**: Delivers tailored movie suggestions based on individual user preferences and rating history
+- **Multiple Algorithm Support**: Implements both collaborative filtering and content-based recommendation approaches
+- **Comprehensive Data Analysis**: Includes exploratory analysis of user behavior, rating patterns, and movie metadata
+- **Content Similarity**: Identifies movies with similar characteristics based on genres, actors, directors, and other metadata
+- **Custom Evaluation Framework**: Measures recommendation quality using multiple metrics beyond standard error measurements
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -43,7 +43,7 @@ A machine learning-based recommendation engine that suggests personalized movie 
    python src/data/download_data.py
    ```
 
-## 📋 Usage
+## Usage
 
 1. Run the exploratory data analysis notebook to understand the dataset:
    ```bash
@@ -65,7 +65,7 @@ A machine learning-based recommendation engine that suggests personalized movie 
    python src/recommendation_engine.py --user_id 42
    ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 movie-recommender/
@@ -85,7 +85,7 @@ movie-recommender/
         └── preprocessing.py        # Helper functions for data pre-processing
 ```
 
-## 🔧 Implementation Details
+## Implementation Details
 
 The recommendation system is implemented in multiple phases:
 
@@ -94,10 +94,10 @@ The recommendation system is implemented in multiple phases:
 3. **Model Implementation**: Building and training different recommendation algorithms
 4. **Evaluation**: Comparing model performance using various metrics
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👏 Acknowledgments
+## Acknowledgments
 
 - [MovieLens](https://grouplens.org/datasets/movielens/) for providing the dataset
