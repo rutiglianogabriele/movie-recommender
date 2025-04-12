@@ -1,14 +1,9 @@
+import os
 from pathlib import Path
 
 class Config:
-    # Project structure
-    ROOT_DIR = Path(__file__).resolve().parent.parent 
-    DATA_DIR = ROOT_DIR / "data"
-    MODELS_DIR = ROOT_DIR / "src" / "models"
-    NOTEBOOKS_DIR = ROOT_DIR / "notebooks"
-    DARA_LOAD_DIR = ROOT_DIR / "src" / "data"
-    
-    
-    # Data configuration
-    RATINGS_FILE = "ratings.csv"
-    MOVIES_FILE = "movies.csv"
+    def __init__(self):
+        self.BASE_DIR = Path(os.path.dirname(os.path.dirname(__file__)))
+        self.DATA_DIR = self.BASE_DIR / 'data'
+        self.RATINGS_FILE = 'ratings.csv'
+        self.MOVIES_FILE = 'movies.csv'
